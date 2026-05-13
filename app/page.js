@@ -158,6 +158,7 @@ export default function Dashboard() {
               onToggle={handleToggle}
               onDelete={handleDelete}
               isLoading={false}
+              jwt={jwt}
             />
           </div>
         </div>

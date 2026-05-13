@@ -2,7 +2,7 @@
 
 import TodoItem from "./TodoItem";
 
-export default function TodoList({ todos, onToggle, onDelete, isLoading }) {
+export default function TodoList({ todos, onToggle, onDelete, isLoading, jwt }) {
   const pending = todos.filter((t) => !t.isCompleted);
   const completed = todos.filter((t) => t.isCompleted);
 
@@ -97,6 +97,7 @@ export default function TodoList({ todos, onToggle, onDelete, isLoading }) {
                 todo={todo}
                 onToggle={onToggle}
                 onDelete={onDelete}
+                jwt={jwt}
               />
             ))}
           </ul>
@@ -117,6 +118,7 @@ export default function TodoList({ todos, onToggle, onDelete, isLoading }) {
                 todo={todo}
                 onToggle={onToggle}
                 onDelete={onDelete}
+                jwt={jwt}
               />
             ))}
           </ul>
